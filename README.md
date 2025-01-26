@@ -13,6 +13,7 @@ Una vez rellena la lista con la cantidad de amigos deseada, elegirá uno aleator
     <li>Si el nombre ya ha sido sorteado, no volverá a sortearse.</li>
     <li>Si el nombre ya existe en la lista, no será posible volver a incluirlo.</li>
 </ul>
+
 ```Autor del proyecto: Diego Gabriel Gutiérrez Cortés```
 
 Esta versión del challenge está sujeta a cambios futuros para mejoras de optimización y/o implementación de otras funcionalidades.
