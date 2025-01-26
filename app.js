@@ -20,7 +20,6 @@ function agregarAmigo(){
         let nuevoElemento = document.createElement("li");
         nuevoElemento.textContent = document.querySelector("#amigo").value;
         listaDeAmigos.appendChild(nuevoElemento);
-        console.log(listaAmigos);
 
         //Para limpiar la caja de texto
         document.querySelector("#amigo").value = "";
@@ -41,8 +40,6 @@ function sortearAmigo(){
 function generarNumeroSecreto(){
     let numeroAleatorio = Math.floor(Math.random() * listaAmigos.length);
 
-    console.log(numeroAleatorio);
-
     if(numerosGenerados.length == listaAmigos.length){
         document.querySelector("#resultado").innerHTML = "No hay más amigos que sortear!";
         alert("Ya se han sorteado todos los nombres existentes!");
@@ -54,7 +51,6 @@ function generarNumeroSecreto(){
         }
         else{
             numerosGenerados.push(numeroAleatorio);
-            console.log(numerosGenerados);
             return numeroAleatorio;
         }
     }
