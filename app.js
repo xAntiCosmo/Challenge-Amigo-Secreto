@@ -1,15 +1,19 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-
 let listaAmigos = [];
-let numerosGenerados = [];
-const listaDeAmigos = document.querySelector("#listaAmigos");
-listaDeAmigos.innerHTML = "";
+let numerosGenerados = []; //Arreglo para sortear amigos diferentes
+const listaDeAmigos = document.querySelector("#listaAmigos"); //Selección de referencia para insertar los nombres en una lista
+listaDeAmigos.innerHTML = ""; //Para limpiar el campo de la lista
 
 function agregarAmigo(){
+    //Si la caja de texto está vacía
     if(document.querySelector("#amigo").value == ""){
         alert("Por favor, ingresa un nombre válido.");
     }
+    //Si el nombre ya existe en el arreglo
+    else if(listaAmigos.includes(document.querySelector("#amigo").value)){
+        alert("Este nombre ya ha sido ingresado.");
+    }
     else{
+        //Para agregar el nombre al arreglo
         listaAmigos.push(document.querySelector("#amigo").value);
         
         //Para agregar el nombre a una lista
@@ -18,10 +22,12 @@ function agregarAmigo(){
         listaDeAmigos.appendChild(nuevoElemento);
         console.log(listaAmigos);
 
+        //Para limpiar la caja de texto
         document.querySelector("#amigo").value = "";
     }
 }
 
+//Sortea un amigo aleatorio que no haya sido sorteado antes
 function sortearAmigo(){
     let numeroAleatorio = generarNumeroSecreto();
     if(numeroAleatorio != -1){
@@ -31,6 +37,7 @@ function sortearAmigo(){
     }
 }
 
+//Genera un número aleatorio, pero si ya fue sorteado, genera otro diferente
 function generarNumeroSecreto(){
     let numeroAleatorio = Math.floor(Math.random() * listaAmigos.length);
 
