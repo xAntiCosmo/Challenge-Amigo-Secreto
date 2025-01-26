@@ -9,6 +9,7 @@ Al cargar la página, se reiniciará la lista de amigos ingresados.
 Una vez rellena la lista con la cantidad de amigos deseada, elegirá uno aleatoriamente, el cual será el amigo sorteado.
 
 ```Cambios```
+
 Si el nombre ya ha sido sorteado, no volverá a sortearse.
 Si el nombre ya existe en la lista, no será posible volver a incluirlo.
 
